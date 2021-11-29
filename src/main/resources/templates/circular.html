@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" xmlns:th ="http://www.thymeleaf.org"
+                xmlns:sec ="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{css/JIS.css}">
+
+  <title>Judiciary Information System</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> <b style="font-size: 20px;">JIS</b> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="upcoming.html">Upcoming Cases</a></li>
+              <li><a class="dropdown-item" href="ongoing.html">Ongoing Cases</a></li>
+              <li><a class="dropdown-item" href="past.html">Past Cases</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a href=""> <button type="button" class="btn btn-light">Register</button> </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+       <div class="carousel-item active">
+        <img src="https://www.startupdaily.net/wp-content/uploads/2012/11/Professional-Liability-Insurance-for-Lawyers.jpeg" width="1915" height="500" class="d-block w-100" alt="...">
+       </div>
+       <!--<div class="carousel-item">
+            <img src="" 
+            class="d-block w-100" alt="court" max-width="100%" height="480">
+       </div>
+       <div class="carousel-item">
+            <img src=""  class="d-block w-100" alt="pic" width="1915" height="480">
+       </div>-->
+    </div>
+  </div><br>
+  <div class="row" style="padding-left: 60px; padding-right:60px ;">
+<div class="col-md-8">
+  <h2 style="text-align: center;">Circular Notices</h2><br>
+  <div class="list">
+   <ul>
+      <li><a href="https://main.sci.gov.in/pdf/ListingNotice/27112021_052618.pdf" style="text-decoration: none; color:maroon;">LIST OF ORAL MENTIONING MATTERS FOR 15.12.21 <img src="https://main.sci.gov.in/php/img/new.gif" style="width: 30px;"></a></li><hr>
+      <li><a href="https://main.sci.gov.in/pdf/ListingNotice/23112021_052526.pdf" style="text-decoration: none; color:maroon">Notice regarding deletion of Review Petitions listed by circulation on 12.12.2021.<img src="https://main.sci.gov.in/php/img/new.gif" style="width: 30px;"></a></li><hr >
+      <li><a href="https://main.sci.gov.in/pdf/LU/26112021_043658.pdf" style="text-decoration: none;color:maroon">Helpline numbers of Court Masters/Court Moderators for 26.11.2021</a></li><hr>
+      <li><a href="https://main.sci.gov.in/pdf/ListingNotice/27112021_090636.pdf" style="text-decoration: none; color:maroon">Notice regarding cancellation of Single Judge Bench and Chamber matters listed on 23-11-2021 in Court No. 6.</a></li><hr >
+      <li><a href="https://main.sci.gov.in/pdf/cir/14042021_030659.pdf"style="text-decoration: none; color:maroon">Covid-19 additional guidelines for entrants to the Supreme Court premises</a></li>  
+  </ul>
+</div>
+</div><br>
+<div class="col-md-4">
+    <div class="holder">
+      <div>
+        <h4 class="fst-italic" style="background-color: black; color: white; width:300px;
+       padding-left: 20px; border-radius: 20px; font-weight: 600;">Latest Information</h4>
+      </div>
+      <ul id="ticker01">
+        <li><span>25/12/2021</span>&nbsp;-&nbsp;<a href="#"></a>Christmas Holiday <img src="https://main.sci.gov.in/php/img/new.gif" style="width: 30px;"> </li><hr>
+        <li><span>10/12/2021</span>&nbsp;-&nbsp;<a href="#">Roshno Land Scam Case <img src="https://main.sci.gov.in/php/img/new.gif" style="width: 30px;"></a></li><hr>
+        <li><span>02/12/2021</span>&nbsp;-&nbsp;<a href="#">Sanjeev R. Wodeyar Vs The State of Karnataka Case <img src="https://main.sci.gov.in/php/img/new.gif" style="width: 30px;"> </a></li><hr>
+        <li><span>19/11/2021</span>&nbsp;-&nbsp;<a href="#">Holiday for Guru Nanak's Birthday</a></li><hr>
+        <li><span>05/11/2021</span>&nbsp;-&nbsp;<a href="#">Guidelines to use Hybrid Physical Hearing and Special Hearing Entry Pass</a></li><hr>
+        <li><span>28/10/2021</span>&nbsp;-&nbsp;<a href="#">Regarding Guidelines for entrants to Lawyers Chambers Block(Covid-19)</a></li><hr>
+        <li><span>08/09/2021</span>&nbsp;-&nbsp;<a href="#">Notice regarding deletion of Review Petitions listed by Circulation on 29-09-2021</a></li><hr>
+        <li><span>25/08/2021</span>&nbsp;-&nbsp;<a href="#">Judgement on BANGALORE DEVELOPMENT AUTHORITY & ANR. Petitioner(s) Vs STATE OF KARNATAKA & ORS Case</a></li><hr>
+        <li><span>17/08/2021</span>&nbsp;-&nbsp;<a href="#">Notice Regarding the cancellation of Single Judge Bench and Chamber Matters listed on 17-08-2021 in Court No-9</a></li><hr>
+            </ul>
+    </div>
+    <br><br>
+    <div class="btn-group-vertical" style="background-color: #f8f9fa;">
+      <h4 class="fst-italic" style="background-color: black; color: white; width:300px;
+      padding-left: 20px; border-radius: 20px; font-weight: 600;">Archives</h4>
+      <ol class="list-unstyled mb-0" style="padding: 10px;">
+           <li><a href="lawyers_and_judges.html">Lawyers and Judges</a></li>
+           <li><a
+            href="https://doj.gov.in/acts-and-rules">
+            Rules and Regulation</a></li>
+           <li><a
+            href="judgeslibrary.html">
+             Judges Library</a></li>
+            <li><a href="jlleave.html">Lawyers and Judges on Leave</a></li>    
+            <li><a
+                href="https://devgan.in/all_sections_ipc.php">All Sections List</a></li>    
+      </ol>
+    </div><br><br>
+    <h5 class="fst-italic" style="background-color: black; color: white; width:300px;
+      padding-left: 20px; border-radius: 20px; font-weight: 600;"><a href="circular.html">Circular Notices</a></h5>
+      <h5 class="fst-italic" style="background-color: black; color: white; width:300px;
+      padding-left: 20px; border-radius: 20px; font-weight: 600;"><a href="https://main.sci.gov.in/jurisdiction">Jurisdictions</a></h5>
+      <h5 class="fst-italic" style="background-color: black; color: white; width:300px;
+      padding-left: 20px; border-radius: 20px; font-weight: 600;"><a href="notification.html">Notifications</a></h5>
+       <h5 class="fst-italic" style="background-color: black; color: white; width:300px;
+       padding-left: 20px; border-radius: 20px; font-weight: 600;"><a href="calender.html">Calender</a></h5>
+  </div>
+
+</div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">
+    jQuery.fn.liScroll = function(settings) {
+   settings = jQuery.extend({
+  travelocity: 0.03
+  }, settings);		
+  return this.each(function(){
+      var $strip = jQuery(this);
+      $strip.addClass("newsticker")
+      var stripHeight = 1;
+      $strip.find("li").each(function(i){
+        stripHeight += jQuery(this, i).outerHeight(true); // thanks to Michael Haszprunar and Fabien Volpi
+      });
+      var $mask = $strip.wrap("<div class='mask'></div>");
+      var $tickercontainer = $strip.parent().wrap("<div class='tickercontainer'></div>");								
+      var containerHeight = $strip.parent().parent().height();	//a.k.a. 'mask' width 	
+      $strip.height(stripHeight);			
+      var totalTravel = stripHeight;
+      var defTiming = totalTravel/settings.travelocity;	// thanks to Scott Waye		
+      function scrollnews(spazio, tempo){
+      $strip.animate({top: '-='+ spazio}, tempo, "linear", function(){$strip.css("top", containerHeight); scrollnews(totalTravel, defTiming);});
+      }
+      scrollnews(totalTravel, defTiming);				
+      $strip.hover(function(){
+        jQuery(this).stop();
+      },
+      function(){
+        var offset = jQuery(this).offset();
+        var residualSpace = offset.top + stripHeight;
+        var residualTime = residualSpace/settings.travelocity;
+        scrollnews(residualSpace, residualTime);
+      });			
+  });	
+};
+
+$(function(){
+  $("ul#ticker01").liScroll();
+});
+  </script>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

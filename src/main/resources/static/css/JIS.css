@@ -1,0 +1,123 @@
+a {
+    text-decoration:none;
+    color: inherit;
+ }
+ input[type=text] {
+    border: 2px solid rgb(129, 194, 248);
+    border-radius: 4px;
+  }
+  .topnav-right {
+   float: right;
+ }
+ .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 200px;
+   background-color: black;
+   color: black;
+   text-align: center;
+}
+.accordion-button {
+  background-color: #f8f9fa !important;
+}
+.holder { 
+  background-color:#eeeeee8e;
+  width:350px;
+  height:250px;
+  border-radius: 5%;
+  overflow:hidden;
+  padding:10px;
+  font-family:Helvetica;
+}
+.holder .mask {
+  position: relative;
+  left: 0px;
+  top: 10px;
+  width:300px;
+  height:240px;
+  overflow: hidden;
+}
+.holder ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  position: relative;
+}
+.holder ul li {
+  padding:0px 0px;
+}
+.holder ul li a {
+  color:rgb(8, 8, 8);
+  text-decoration:none;
+}
+li{
+  padding: 8px;
+}
+.logo{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgwhHmySiJoTY1w5vrIU_-G40k-octGUdv4Z_2kCOCptWG9D6LPby0nKo6BmmgTBala7I&usqp=CAU");
+  background-repeat: no-repeat;
+  max-width: 100%;
+}
+.list ul li:before{
+  content: counter(li);
+  counter-increment: li;
+  top: 80%;
+  position: absolute;
+  margin: -1.3em;
+  height: 2em;
+  padding: 1px;
+  min-width: 2em;
+  line-height: 1.5em;
+  list-style-type: none; 
+  font-size: 15px;
+  color: #fff;
+  background: #c01700;
+  border: 0.2em solid #fff;
+  box-shadow: 0 8px 5px -7px #888;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  transition: all .3s ease-out;
+}
+.list ul li:hover::before{
+  background: black;
+  animation: rotate 0.7s ease-out;
+}
+.list ul {
+  list-style: none;
+  counter-reset: li;
+  left: -7px;
+  width: 90%;
+}
+.list ul li{
+  background: #eee;
+  position: relative;
+  display: block;
+  padding: 0.4em 0.2em 0.4em 2em;
+  margin: 0.5em 0;
+  background: #ebebeb;
+  text-decoration: none;
+  border-radius: 0.3em;
+  transition: all .3s ease-out;
+}
+.list li {
+  position: relative;
+  margin: 0 0 10px 0;
+  padding: 3px 2px 0 17px;
+  left: -5px;
+  width: 100%;
+}
+
+@keyframes rotate{
+  0%{
+      transform: rotate(0deg);
+  }
+  
+  100%{
+      transform: rotate(360deg);
+  }
+}

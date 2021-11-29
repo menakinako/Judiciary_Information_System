@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale:1.0">
+	<title>Judiciary</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" th:href="@{css/style.css}">
+</head>
+<body>
+		<div class="card">
+			<div class="card-title">             
+				<h3><i class="fa fa-user-circle-o" aria-hidden="true"></i> User <span id="action_title">Login</span></h3>
+			</div>
+			<div class="card-body">             
+				<div class="card-body-top">
+					<button id="login" class="btn" name="login" onclick="login()">login</button>
+					<button id="register" class="btn" name="register" onclick="register()">register</button>
+					<div id="pointer-btn"></div>
+				</div>
+				<div class="card-body-login">
+					<form id="login-form" th:action="@{/login.html}" th:method="post">             
+						<input class="input-form" type="email" name ="username" placeholder="Enter your email" required><br><br>
+						<input class="input-form" type="password" name ="password" placeholder="Enter your password" required><br><br><br>
+						<input class="submit-form" name="submit" type="submit" value="Login">
+					</form>
+					<form id="register-form" th:action="@{/signup}" th:object="${user}" method="post">             
+						<input class="input-form" type="text" name="fullname" placeholder="Enter your full name" th:field="*{fullName}" required><br><br>
+						<input class="input-form" type="email" name="email" placeholder="Enter your email" th:field="*{email}" required><br><br>
+						<input class="input-form" type="password" name="password" placeholder="Enter your password" th:field="*{password}" required><br><br>
+                        <select th:field= "*{role}" class= "input-form" placeholder =" Your desgnation" required>
+                            <th:block th:each="rol :${listRoles}">
+                                <option th:if="${rol.id > 1}" th:text= "${rol.name}" th:value= "${rol.id}"  style="color:black">
+                            </th:block>
+                        </select>
+                        <br>
+                        <br>
+						<input class="submit-form" type="submit" value="Register">
+					</form>
+				</div>
+			</div>
+		</div>
+	
+	<script th:src="@{./js/script.js}"></script>
+</body>
+</html>
